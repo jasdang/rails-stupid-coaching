@@ -1,1 +1,15 @@
-answer
+<div class="card">
+  <p><%= @question %></p>
+  <p>_You</p>
+</div>
+
+<div class="card">
+  <% if @question == 'I am going to work' %>
+    <%= 'Great!' %>
+  <% elsif @question.end_with?('?') %>
+    <%= "Silly question, get dressed and go to work!" %>
+  <% else %>
+    <%= "I don't care, get dressed and go to work!" %>
+  <% end %>
+  <p>_Your coach</p>
+</div>
